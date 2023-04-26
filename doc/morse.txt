@@ -1,0 +1,102 @@
+*morse.txt*           Plugin to help on morse code
+
+==============================================================================
+CONTENTS                                                  *morse-contents*
+
+    1.Intro........................................|morse-intro|
+    2.Installation.................................|morse-installation|
+      2.1 vim-plug.................................|morse-ins-vim-plug|
+      2.2 lazy.....................................|morse-ins-lazy|
+    3.Setup........................................|morse-setup|
+    4.Commands.....................................|morse-commands|
+    5.<Plug>.......................................|morse-plug|
+    6.About........................................|morse-about|
+    7.License......................................|morse-license|
+
+
+==============================================================================
+1. Intro 					                                          *morse-intro*
+
+morse.vim is a vim plugin for vim/neovim, it helps to code current buffer
+or current line to morse code.
+
+Morse code wiki: https://en.wikipedia.org/wiki/Morse_code
+
+==============================================================================
+2.Installation                                          *morse-installation*
+
+You can install the plugin with your favorite plugin manager.
+
+------------------------------------------------------------------------------
+2.1 vim-plug                                            *morse-ins-vim-plug*
+
+You can do it with lua code, for example, with the built-in sound handler.
+  >
+    Plug 'jerrywang1981/morse.vim'
+<
+
+------------------------------------------------------------------------------
+2.2 lazy                                                *morse-ins-lazy*
+
+You can do it with lua code, for example, with the built-in sound handler.
+  >
+    {
+        "jerrywang1981/morse.vim",
+          config = function()
+              end,
+
+    }
+<
+==============================================================================
+3.Setup                                                        *morse-setup*
+
+Setup function to be run by user. Configure how morse works.
+------------------------------------------------------------------------------
+
+Usage:
+  >
+  let g:morse_save_to_reg = 1
+<
+
+By default, running command will open the morse code in new buffer window,
+if you prefer to save the result in register, you can enabled it by previous
+block of code.
+
+==============================================================================
+4.Commands                                                  *morse-commands*
+
+:MorseBuffer                                                *:MorseBuffer*
+
+convert current buffer to morse code
+
+:MorseLine                                                  *:MorseLine*
+
+convert current line to morse code
+
+==============================================================================
+5.<Plug>                                                   *morse-plug*
+
+<Plug>MorseBuffer                                         *<Plug>MorseBuffer*
+
+convert current buffer to morse code
+
+<Plug>MorseLine                                           *<Plug>MorseLine*
+
+convert current line to morse code
+
+==============================================================================
+6.About 						       *morse-about*
+
+The maintainers are:
+  Jerry Wang <jerrywang1981@outlook.com>
+  github: jerrywang1981
+
+Find latest version at:
+  https://github.com/jerrywang1981/morse.vim
+
+==============================================================================
+7.License                                                    *morse-license*
+
+morse.vim is released under MIT license.
+
+vim:tw=78:ts=8:ft=help:norl:
